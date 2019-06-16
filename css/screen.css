@@ -1,0 +1,1153 @@
+/*------------------------------------*\
+  #FONTS
+\*------------------------------------*/
+@font-face {
+  font-family: 'source-sans';
+  font-weight: 200;
+  src: url(../fonts/SourceSansPro-Light.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'source-sans';
+  font-weight: 400;
+  src: url(../fonts/SourceSansPro-Regular.ttf) format('ttf');
+}
+@font-face {
+  font-family: 'source-sans';
+  font-weight: 600;
+  src: url(../fonts/SourceSansPro-Bold.ttf) format('ttf');
+}
+/*------------------------------------*\
+  #GENERIC
+\*------------------------------------*/
+
+/*
+    Generic: Page
+    ---
+    Global page styles + universal box-sizing:
+*/
+button:focus {
+  outline: none;
+}
+
+html {
+  font-size: 18px;
+  line-height: 1.5;
+  font-family: 'source-sans', Helvetica, arial, sans-serif;
+  font-weight: 400;
+  color: #111;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff8f5;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+label {
+  max-width: 100%;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #2cb3bf;
+  color: white;
+  text-shadow: none;
+}
+
+::selection {
+  background: #2cb3bf;
+  color: white;
+  text-shadow: none;
+}
+
+/*------------------------------------*\
+  #Elements
+\*------------------------------------*/
+
+/*
+    Elements: Images
+    ---
+    Default markup for images to make them responsive
+*/
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+/*
+    Elements: typography
+    ---
+    Default markup for typographic elements
+*/
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 48px;
+  margin: 0 0 24px;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 40px;
+  margin: 0 0 24px;
+}
+
+h3 {
+  font-size: 26px;
+  line-height: 32px;
+  margin: 0 0 24px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+
+p,
+ol,
+ul,
+dl,
+table,
+address,
+figure {
+  margin: 0 0 24px;
+}
+
+ul,
+ol {
+  padding-left: 24px;
+}
+
+li ul,
+li ol {
+  margin-bottom: 0;
+}
+
+blockquote {
+  font-style: normal;
+  font-size: 23px;
+  line-height: 32px;
+  margin: 0 0 24px;
+}
+
+blockquote * {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+figcaption {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 8px;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: LightGrey;
+  margin: 0 0 24px;
+}
+
+a {
+  color: #30c2ff;
+  transition: all 0.1s ease-in-out;
+}
+
+a:visited,
+a:active {
+  color: #30c2ff;
+}
+
+a:hover {
+  color: #3ec18f;
+}
+
+/*------------------------------------*\
+  #OBJECTS
+\*------------------------------------*/
+
+/*
+    Objects: Row
+    ---
+    Creates a horizontal row that stretches the viewport and adds padding around children
+*/
+
+.o-row {
+  position: relative;
+  padding: 24px 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* size modifiers */
+
+.o-row--lg {
+  padding-top: 48px;
+  padding-bottom: 24px;
+}
+
+.o-row--xl {
+  padding-top: 72px;
+  padding-bottom: 48px;
+}
+
+.o-row--red {
+  background-color: #e91400;
+}
+.o-row--white {
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .o-row {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .o-row--md {
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+
+  .o-row--lg {
+    padding-top: 72px;
+    padding-bottom: 48px;
+  }
+}
+
+@media (min-width: 992px) {
+  .o-row--xl {
+    padding-top: 96px;
+    padding-bottom: 72px;
+  }
+}
+
+/*
+    Objects: Container
+    ---
+    Creates a horizontal container that sets de global max-width
+*/
+
+.o-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 90em; /* 90 * 16px = 1440px */
+}
+
+/*
+    Objects: section
+    ---
+    Creates vertical whitespace between adjacent sections inside a row
+*/
+
+.o-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.o-section + .o-section {
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .o-section--lg + .o-section--lg,
+  .o-section--xl + .o-section--xl {
+    margin-top: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .o-section--xl + .o-section--xl {
+    margin-top: 72px;
+  }
+}
+
+/*
+    Objects: Layout
+    ---
+    The layout object provides us with a column-style layout system. This object
+    contains the basic structural elements, but classes should be complemented
+    with width utilities
+*/
+
+.o-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.o-layout__item {
+  width: 100%;
+}
+
+/* gutter modifiers, these affect o-layout__item too */
+
+.o-layout--gutter {
+  margin: 0 -12px;
+}
+
+.o-layout--gutter > .o-layout__item {
+  padding: 0 12px;
+}
+
+.o-layout--gutter-sm {
+  margin: 0 -6px;
+}
+
+.o-layout--gutter-sm > .o-layout__item {
+  padding: 0 6px;
+}
+
+.o-layout--gutter-lg {
+  margin: 0 -24px;
+}
+
+.o-layout--gutter-lg > .o-layout__item {
+  padding: 0 24px;
+}
+
+.o-layout--gutter-xl {
+  margin: 0 -48px;
+}
+
+.o-layout--gutter-xl > .o-layout__item {
+  padding: 0 48px;
+}
+
+/* reverse horizontal row modifier */
+
+.o-layout--row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Horizontal alignment modifiers*/
+
+.o-layout--justify-start {
+  justify-content: flex-start;
+}
+
+.o-layout--justify-end {
+  justify-content: flex-end;
+}
+
+.o-layout--justify-center {
+  justify-content: center;
+}
+
+.o-layout--justify-space-around {
+  justify-content: space-around;
+}
+
+.o-layout--justify-space-evenly {
+  justify-content: space-evenly;
+}
+
+.o-layout--justify-space-between {
+  justify-content: space-between;
+}
+
+/* Vertical alignment modifiers */
+
+.o-layout--align-start {
+  align-items: flex-start;
+}
+
+.o-layout--align-end {
+  align-items: flex-end;
+}
+
+.o-layout--align-center {
+  align-items: center;
+}
+
+.o-layout--align-baseline {
+  align-items: baseline;
+}
+
+/* Vertical alignment modifiers that only work if there is more than one flex item */
+
+.o-layout--align-content-start {
+  align-content: start;
+}
+
+.o-layout--align-content-end {
+  align-content: end;
+}
+
+.o-layout--align-content-center {
+  align-content: center;
+}
+
+.o-layout--align-content-space-around {
+  align-content: space-around;
+}
+
+.o-layout--align-content-space-between {
+  align-content: space-between;
+}
+
+.o-center {
+  margin: 0 auto;
+}
+
+.o-setting {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/*
+    Objects: List
+    ---
+    Small reusable object to remove default list styling from lists
+*/
+
+.o-list {
+  list-style: none;
+  padding: 0;
+}
+/*
+    Objects: link
+    ---
+    special link style
+*/
+.o-special-link {
+  padding: 10px 20px 10px 20px !important;
+  background-color: #3ec18f;
+  border-radius: 10px;
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.o-special-link:hover {
+  text-shadow: 0px 0px 10px #fff;
+  color: #dbedff;
+}
+/*
+    Objects: background
+    ---
+    different background
+*/
+.o-back-black {
+  background-color: #0c0d0c;
+  color: #fff;
+}
+/*
+    Objects: center
+    ---
+    to center text till breakpoint 2
+*/
+.o-center-bp2 {
+  text-align: center !important;
+}
+@media (min-width: 768px) {
+  .o-center-bp2 {
+    text-align: left !important;
+  }
+}
+
+.o-spotify {
+  margin: 0 auto;
+}
+
+/*
+    Object: Button reset
+    ---
+    Small button reset object
+*/
+
+.o-button-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+.o-button {
+  text-decoration: underline;
+}
+.o-label {
+  display: block;
+  color: #00656e;
+}
+.o-input:valid {
+  border-radius: 5px;
+  border: 2px solid #00656e;
+  width: 100%;
+}
+.o-input:invalid {
+  border-radius: 5px;
+  border: 2px solid #e91400;
+  width: 100%;
+}
+
+.o-submit {
+  border: 2px solid #00656e;
+  color: #f1edff;
+  background-color: #2cb3bf;
+  border-radius: 10px;
+  width: 25%;
+  margin-top: 20px;
+}
+
+.o-text {
+  text-align: center;
+}
+.o-intro {
+  color: #000;
+  text-align: center;
+}
+
+.log {
+  margin-left: 26px;
+  margin-top: 8px;
+}
+
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+/*
+    component: header
+    ---
+    header of the site
+*/
+.c-nav-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.c-nav-trigger__svg {
+  fill: #fff;
+  height: 100%;
+}
+
+.c-header__icon {
+  width: 100%;
+  text-align: center;
+}
+.c-nav__item {
+  width: 50%;
+}
+.c-nav__link,
+.c-nav__link:active,
+.c-nav__link:visited {
+  padding-right: 1em;
+  text-decoration: none;
+  color: #fff;
+}
+.c-nav__link:hover,
+.c-nav__link--active,
+.c-nav__link--active:active,
+.c-nav__link--active:visited {
+  color: #1e0d65;
+}
+.c-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .c-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .c-header__icon {
+    width: auto;
+  }
+  .c-nav {
+    display: block;
+  }
+  .c-nav__item {
+    width: auto;
+  }
+  .c-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 100px;
+    margin-top: 15px;
+  }
+}
+
+/* component:circle */
+
+.c-circle {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  font-size: 25px;
+  line-height: 125px;
+  text-align: center;
+  background: #000;
+
+  margin: 0 auto;
+}
+.c-circle--open {
+  color: #d6f7fa;
+  background-color: #008a96;
+  border: 3px solid #00656e;
+}
+.c-circle--closed {
+  color: #fff;
+  background-color: #fd5c22;
+  border: 3px solid #eb3e00;
+}
+
+/* table */
+
+.c-table {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: normal;
+  border: none;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+  background-color: white;
+}
+
+.c-table td,
+.c-table th {
+  text-align: center;
+  padding: 8px;
+}
+
+.c-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+
+.c-table thead th {
+  color: #ffffff;
+
+  background: #fd5c22;
+}
+
+.c-table thead th:nth-child(odd) {
+  color: #ffffff;
+  background: #2cb3bf;
+}
+
+.c-table tr:nth-child(even) {
+  background: #f8f8f8;
+}
+.js-table {
+  overflow-x: auto;
+}
+@media (min-width: 920px) {
+  .js-table {
+    overflow-x: hidden;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+  .fl-table {
+    display: block;
+    width: 100%;
+  }
+  .table-wrapper:before {
+    content: 'Scroll horizontally >';
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    color: white;
+    padding: 0 0 10px;
+  }
+  .fl-table thead,
+  .fl-table tbody,
+  .fl-table thead th {
+    display: block;
+  }
+  .fl-table thead th:last-child {
+    border-bottom: none;
+  }
+  .fl-table thead {
+    float: left;
+  }
+  .fl-table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+  .fl-table td,
+  .fl-table th {
+    padding: 20px 0.625em 0.625em 0.625em;
+    height: 60px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 120px;
+    font-size: 13px;
+    text-overflow: ellipsis;
+  }
+  .fl-table thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+  }
+  .fl-table tbody tr {
+    display: table-cell;
+  }
+  .fl-table tbody tr:nth-child(odd) {
+    background: none;
+  }
+  .fl-table tr:nth-child(even) {
+    background: transparent;
+  }
+  .fl-table tr td:nth-child(odd) {
+    background: #f8f8f8;
+    border-right: 1px solid #e6e4e4;
+  }
+  .fl-table tr td:nth-child(even) {
+    border-right: 1px solid #e6e4e4;
+  }
+  .fl-table tbody td {
+    display: block;
+    text-align: center;
+  }
+}
+
+/*------------------------------------*\
+  #UTILITIES
+\*------------------------------------*/
+/*
+    Utilities: text
+    ---
+    Utility classes to put specific text styles
+*/
+.u-text-lg {
+  font-size: 30px;
+  line-height: 1em;
+}
+@media (min-width: 768px) {
+  .u-text-lg {
+    font-size: 80px;
+    line-height: 1em;
+  }
+}
+
+.u-center {
+  text-align: center;
+}
+
+/*
+    Utilities: spacing
+    ---
+    Utility classes to put specific margins and paddings onto elements
+*/
+
+.u-pt-clear {
+  padding-top: 0 !important;
+}
+
+.u-mb-clear {
+  margin-bottom: 0 !important;
+}
+
+.u-mb-xs {
+  margin-bottom: 4px !important;
+}
+
+.u-mb-sm {
+  margin-bottom: 8px !important;
+}
+
+.u-mb-md {
+  margin-bottom: 16px !important;
+}
+
+.u-mb-lg {
+  margin-bottom: 32px !important;
+}
+
+.u-mb-xl {
+  margin-bottom: 48px !important;
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific max widths onto elements
+*/
+
+.u-max-width-xs {
+  max-width: 22em !important;
+}
+
+.u-max-width-sm {
+  max-width: 26em !important;
+}
+
+.u-max-width-md {
+  max-width: 36em !important;
+}
+
+.u-max-width-lg {
+  max-width: 50em !important;
+}
+.u-max-width-xl {
+  max-width: 70em !important;
+}
+.u-max-width-xxl {
+  max-width: 80em !important;
+}
+
+.u-max-width-none {
+  max-width: none !important;
+}
+
+.u-max-width-bp2 {
+  max-width: 26em;
+}
+@media (min-width: 768px) {
+  .u-max-width-bp2 {
+    max-width: 70em !important;
+  }
+}
+
+/*
+    Utility: Widths
+    ---
+    Utility classes to put specific widths onto elements
+    Will be mostly used on o-layout__item
+*/
+
+.u-width-auto {
+  width: auto !important;
+}
+
+.u-1-of-2 {
+  width: 50% !important;
+}
+
+.u-1-of-3 {
+  width: 33.3333333333% !important;
+}
+
+.u-2-of-3 {
+  width: 66.6666666667% !important;
+}
+
+.u-1-of-4 {
+  width: 25% !important;
+}
+
+.u-3-of-4 {
+  width: 75% !important;
+}
+
+.u-1-of-5 {
+  width: 20% !important;
+}
+
+.u-2-of-5 {
+  width: 40% !important;
+}
+
+.u-3-of-5 {
+  width: 60% !important;
+}
+
+.u-4-of-5 {
+  width: 80% !important;
+}
+
+.u-1-of-6 {
+  width: 16.6666666667% !important;
+}
+
+.u-5-of-6 {
+  width: 83.3333333333% !important;
+}
+
+@media (min-width: 576px) {
+  .u-1-of-2-bp1 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp1 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp1 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp1 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp1 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp1 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp1 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp1 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp1 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp1 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp1 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .u-1-of-2-bp2 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp2 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp2 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp2 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp2 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp2 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp2 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp2 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp2 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp2 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp2 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .u-1-of-2-bp3 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp3 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp3 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp3 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp3 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp3 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp3 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp3 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp3 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp3 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp3 {
+    width: 83.3333333333% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .u-1-of-2-bp4 {
+    width: 50% !important;
+  }
+  .u-1-of-3-bp4 {
+    width: 33.3333333333% !important;
+  }
+  .u-2-of-3-bp4 {
+    width: 66.6666666667% !important;
+  }
+  .u-1-of-4-bp4 {
+    width: 25% !important;
+  }
+  .u-3-of-4-bp4 {
+    width: 75% !important;
+  }
+  .u-1-of-5-bp4 {
+    width: 20% !important;
+  }
+  .u-2-of-5-bp4 {
+    width: 40% !important;
+  }
+  .u-3-of-5-bp4 {
+    width: 60% !important;
+  }
+  .u-4-of-5-bp4 {
+    width: 80% !important;
+  }
+  .u-1-of-6-bp4 {
+    width: 16.6666666667% !important;
+  }
+  .u-5-of-6-bp4 {
+    width: 83.3333333333% !important;
+  }
+}
+
+.u-small {
+  font-size: 12px;
+}
+
+/*------------------------------------*\
+  #MEDIA
+\*------------------------------------*/
+
+/*
+    Media Queries
+    ---
+    EXAMPLE Media Queries for Responsive Design.
+    These examples override the primary ('mobile first') styles.
+    USE THEM INLINE!
+*/
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in mobile first design
+*/
+
+/* Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+*/
+
+/* Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+*/
+
+/* Large devices (landscape tablets, desktops, 992px and up)
+@media (min-width: 992px) {}
+*/
+
+/* Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
+*/
+
+/*
+    Print styles.
+    ---
+    Inlined to avoid the additional HTTP request:
+    http://www.phpied.com/delay-loading-your-print-css/
+*/
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: ' (' attr(href) ')';
+  }
+  abbr[title]:after {
+    content: ' (' attr(title) ')';
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^='#']:after,
+  a[href^='javascript:']:after {
+    content: '';
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}

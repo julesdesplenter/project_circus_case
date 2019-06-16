@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>practime</title>
+    <meta name="description" content="This is my HTML5 boilerplate." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="msapplication-TileColor" content="#30c2ff" />
+    <meta name="theme-color" content="#0c0d0c" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#30c2ff" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/screen.css" />
+    <script src="/script/dataHandler.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js" integrity="sha256-vyehT44mCOPZg7SbqfOZ0HNYXjPKgBCaqxBkW3lh6bg=" crossorigin="anonymous"></script>
+    <script src="/script/actions.js"></script>
+  </head>
+  <body>
+    <div class="o-back-black">
+      <div class="o-row o-row--red">
+        <div class="o-container u-max-width-xxl">
+          <header class="c-header">
+            <div class="c-header__icon">
+              <h1>
+                <a href="/index.html">
+                  <svg height="50px" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 314 255.5">
+                    <defs>
+                      <style>
+                        .cls-1 {
+                          fill: none;
+                          stroke: #fff;
+                          stroke-width: 5px;
+                        }
+                      </style>
+                    </defs>
+                    <title>symbol</title>
+                    <g id="Group_1" data-name="Group 1">
+                      <path id="Union_2" data-name="Union 2" class="cls-1" d="M284,255.5H35A30,30,0,0,1,5,225.56V86.5a30,30,0,0,1,29.94-30H111.5V34A29,29,0,0,1,140.44,5H178.5a29,29,0,0,1,29,28.94V56.5H284a30,30,0,0,1,30,29.94V225.5a30,30,0,0,1-29.94,30Z" transform="translate(-2.5 -2.5)" />
+                      <path id="Path_1" data-name="Path 1" class="cls-1" d="M108.8,56.37H209.07" transform="translate(-2.5 -2.5)" />
+                      <g id="Ellipse_1" data-name="Ellipse 1">
+                        <circle class="cls-1" cx="157" cy="156.5" r="58.5" />
+                        <circle class="cls-1" cx="157" cy="156.5" r="54" />
+                      </g>
+                      <line id="Line_2" data-name="Line 2" class="cls-1" x1="156" y1="156.5" x2="122" y2="172.5" />
+                      <line id="Line_3" data-name="Line 3" class="cls-1" x1="156" y1="156.5" x2="172" y2="136.5" />
+                      <circle id="Ellipse_2" data-name="Ellipse 2" class="cls-1" cx="156" cy="156.5" r="5.5" />
+                    </g>
+                  </svg>
+                </a>
+              </h1>
+            </div>
+            <div class="c-header__menu">
+              <nav class="c-nav">
+                <ul class="c-nav__list">
+                  <li class="c-nav__item"><a class="c-nav__link " href="index.html">home</a></li>
+                  <li class="c-nav__item"><a class="c-nav__link c-nav__link--active" href="actions.html">action details</a></li>
+                  <li class="c-nav__item"><a class="c-nav__link" href="goals.html">goal details</a></li>
+                  <li class="c-nav__item"><a class="c-nav__link" href="settings.html">settings</a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+        </div>
+      </div>
+    </div>
+    <div class="o-row o-row--lg o-row--white">
+      <div class="o-container u-max-width-md">
+        <div class="js-table"></div>
+        <div class="o-layout o-layout--justify-space-around">
+          <button class="js-button o-button-reset o-button o-layout__item js-more">more info</button>
+          <button class="js-button o-button-reset o-button o-layout__item js-set">set action</button>
+        </div>
+      </div>
+    </div>
+    <div class="o-container u-max-width-sm">
+      <div class="o-row o-row--lg">
+        <div>
+          <label for="from">from</label>
+          <input class="o-input" type="datetime" name="begin" id="from" placeholder="yyyy-mm-dd uu:mm:ss" pattern="(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})" required />
+        </div>
+        <div>
+          <label for="till">from</label>
+          <input class="o-input" type="datetime" name="begin" id="till" placeholder="yyyy-mm-dd uu:mm:ss" pattern="(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})" required />
+        </div>
+        <div>
+          <button class="o-submit">go</button>
+        </div>
+      </div>
+    </div>
+    <div class="o-container u-max-width-md">
+      <div class="o-row o-row--lg">
+        <canvas id="test" width="100" height="100"></canvas>
+      </div>
+    </div>
+  </body>
+</html>
